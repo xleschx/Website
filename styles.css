@@ -1,0 +1,172 @@
+* {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 5%;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    font-size: 14pt;
+    color: inherit;
+}
+
+.card {
+    background:  black;
+    align-self: center;
+    border-radius: 10%;
+    width: 40%;
+    margin-top: 5%;
+    animation-name: fadeBox;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 10s;
+}
+
+.cardItem {
+    display: flex;
+    justify-content: center;
+}
+
+.cardContent {
+    color: white;
+    padding: 7%;
+}
+
+#pageContent {
+    padding-bottom: 5%;
+    margin: 0;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#pageContent::-webkit-scrollbar {
+    display: none;
+}
+
+#profilePicContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#profilePic {
+    height: 30%;
+    width: 30%;
+    border-radius: 50%;
+    margin-bottom: 5%;
+}
+
+#linkTree ul li {
+    margin-bottom: 5%;
+}
+
+#linkTree ul li a {
+    transition: font-size 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
+}
+
+#linkTree ul li a:hover {
+    font-size: 20pt;
+    animation-name: fadeText;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+}
+
+
+#inspired ul li {
+    margin-bottom: 5%;
+}
+
+#inspired ul li a {
+    transition: font-size 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
+}
+
+#inspired ul li a:hover {
+    font-size: 20pt;
+    animation-name: fadeText;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+}
+
+#titleDiv ul li {
+    margin-bottom: 2%;
+}
+
+#canvas {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+@media only screen
+and (max-device-width : 1300px) {
+    .card {
+        width: 45%;
+    }
+}
+
+@media only screen
+and (max-device-width : 850px) {
+    .card {
+        width: 60%;
+    }
+}
+
+@media only screen
+and (max-device-width : 480px) {
+     .card {
+         width: 80%;
+     }
+}
+
+@keyframes fadeBox {
+    from {
+        box-shadow:
+                0 0 25px #999,
+                -30px -5px 45px #072b1b,
+                30px 5px 45px #00ff95;
+    }
+    to {
+        box-shadow:
+                0 0 25px #999,
+                -30px -5px 45px #00ff95,
+                30px 5px 45px #072b1b;
+    }
+}
+
+@keyframes fadeText {
+    from {
+        text-shadow:
+                0 0 15px #fff,
+                -15px 0 20px #072b1b,
+                15px 0 20px #00ff95;
+    }
+    to {
+        text-shadow:
+                0 0 15px #fff,
+                -15px 0 20px #00ff95,
+                15px 0 20px #072b1b;
+    }
+}
